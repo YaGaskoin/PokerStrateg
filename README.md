@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="[images/logo.png](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtOmyCfXnsQtiC546aYkOf2IaaY9YGI3edWg7NYI9ZIw&s)" alt="Logo" width="80" height="80">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtOmyCfXnsQtiC546aYkOf2IaaY9YGI3edWg7NYI9ZIw&s" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
