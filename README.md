@@ -48,7 +48,8 @@ This project made for poker newbies who too lazy for remeber preflop charts.
 
 Used tech.
 
-* [![Django][Django]](https://www.djangoproject.com/m/img/badges/djangoproject120x25.gif)
+* ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+* ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
