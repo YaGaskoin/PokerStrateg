@@ -69,7 +69,7 @@ You need only have docker on your pc
 ### Installation
 1. Clone the repo
    ```sh
-   git clone [https://github.com/your_username_/Project-Name.git](https://github.com/YaGaskoin/PokerStrateg.git)
+   git clone https://github.com/YaGaskoin/PokerStrateg.git
    ```
 2. Go to root
 3. Build app and start docker containers
