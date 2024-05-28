@@ -84,9 +84,10 @@ You need only have docker on your pc
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Add base information as cards and positions and stack sizes with comfort for you names.
+2. Make diaposones with you like to play poker.
+3. Go to resolver and post your situations.
+4. Enjoy!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
