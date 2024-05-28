@@ -1,0 +1,27 @@
+
+
+.page{
+  &-wrapper{
+    display: flex;
+    min-height: 100vh;
+  }
+  &-content{
+    padding: 30px;
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+.site-layout-background {
+  background: #fff;
+}

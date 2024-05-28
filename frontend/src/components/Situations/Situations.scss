@@ -1,0 +1,23 @@
+.cardCell{
+  width: 30px;
+  height: 30px;
+  border-radius: 0px !important;
+  padding: 3px;
+  margin: 2px;
+  text-align: center;
+  &:before{
+    color: white !important;
+  }
+
+}
+.ant-form-item-label{
+  width:100% !important;
+  display: flex;
+}
+.ant-form-item-control-input-content{
+  direction: ltr;
+  max-width: 100%;
+}
+.ant-form-item-row{
+  display: block !important;
+}

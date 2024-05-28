@@ -1,0 +1,20 @@
+.pageNumber{
+    padding:5px;
+    margin: 5px;
+    border: 1px solid #8E78E0;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.currentPage{
+    padding:5px;
+    margin: 5px;
+    border: 1px solid #8E78E0;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    color:orangered;
+    border-radius: 2px;
+}
+.paginator{
+    padding: 15px 10px;
+}

@@ -1,0 +1,32 @@
+.cardCell {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px !important;
+  padding: 3px;
+  margin: 2px;
+  text-align: center;
+
+  &:before {
+    color: white !important;
+  }
+   &.ant-checkbox-wrapper {
+    width: 32px;
+    height: 32px;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+     background-color: white;
+  }
+
+  &.ant-checkbox-wrapper-checked {
+    background-color: #1890ff;
+    color: #fff;
+  }
+
+  .ant-checkbox {
+    display: none;
+  }
+}

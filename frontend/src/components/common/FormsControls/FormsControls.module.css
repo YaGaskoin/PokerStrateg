@@ -1,0 +1,19 @@
+.form_control{
+    color:black;
+}
+.error input,
+.error textarea{
+    border: 1px solid red;
+}
+
+.error span{
+    color: red
+}
+.summary_error{
+    padding: 5px;
+    border: 1px solid red;
+    margin: 5px;
+}
+.login_base{
+    margin: 10px;
+}

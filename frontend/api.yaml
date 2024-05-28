@@ -1,0 +1,1072 @@
+openapi: 3.0.3
+info:
+  title: Your Project API
+  version: 1.0.0
+  description: Your project description
+paths:
+  /fact_data/hands:
+    get:
+      operationId: fact_data_hands_list
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Hand'
+          description: ''
+    post:
+      operationId: fact_data_hands_create
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hand'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Hand'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Hand'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hand'
+          description: ''
+  /fact_data/hands/{id}:
+    get:
+      operationId: fact_data_hands_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hand'
+          description: ''
+    put:
+      operationId: fact_data_hands_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hand'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Hand'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Hand'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hand'
+          description: ''
+    patch:
+      operationId: fact_data_hands_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedHand'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedHand'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedHand'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hand'
+          description: ''
+    delete:
+      operationId: fact_data_hands_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /fact_data/positions/:
+    get:
+      operationId: fact_data_positions_list
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Position'
+          description: ''
+    post:
+      operationId: fact_data_positions_create
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Position'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Position'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Position'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Position'
+          description: ''
+  /fact_data/positions/{id}:
+    get:
+      operationId: fact_data_positions_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Position'
+          description: ''
+    put:
+      operationId: fact_data_positions_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Position'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Position'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Position'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Position'
+          description: ''
+    patch:
+      operationId: fact_data_positions_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedPosition'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedPosition'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedPosition'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Position'
+          description: ''
+    delete:
+      operationId: fact_data_positions_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /fact_data/stacks:
+    get:
+      operationId: fact_data_stacks_list
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Stack'
+          description: ''
+    post:
+      operationId: fact_data_stacks_create
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Stack'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Stack'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Stack'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stack'
+          description: ''
+  /fact_data/stacks/{id}:
+    get:
+      operationId: fact_data_stacks_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stack'
+          description: ''
+    put:
+      operationId: fact_data_stacks_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Stack'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Stack'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Stack'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stack'
+          description: ''
+    patch:
+      operationId: fact_data_stacks_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedStack'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedStack'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedStack'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stack'
+          description: ''
+    delete:
+      operationId: fact_data_stacks_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - fact_data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /moves/:
+    get:
+      operationId: moves_list
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Move'
+          description: ''
+    post:
+      operationId: moves_create
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Move'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Move'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Move'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Move'
+          description: ''
+  /moves/{id}:
+    get:
+      operationId: moves_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Move'
+          description: ''
+    put:
+      operationId: moves_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Move'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Move'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Move'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Move'
+          description: ''
+    patch:
+      operationId: moves_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMove'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMove'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMove'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Move'
+          description: ''
+    delete:
+      operationId: moves_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /moves/move_sets:
+    get:
+      operationId: moves_move_sets_list
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MoveSet'
+          description: ''
+    post:
+      operationId: moves_move_sets_create
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MoveSet'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/MoveSet'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MoveSet'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MoveSet'
+          description: ''
+  /moves/move_sets/{id}:
+    get:
+      operationId: moves_move_sets_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MoveSet'
+          description: ''
+    put:
+      operationId: moves_move_sets_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MoveSet'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/MoveSet'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/MoveSet'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MoveSet'
+          description: ''
+    patch:
+      operationId: moves_move_sets_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMoveSet'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMoveSet'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMoveSet'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MoveSet'
+          description: ''
+    delete:
+      operationId: moves_move_sets_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /moves/setups:
+    get:
+      operationId: moves_setups_list
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Setup'
+          description: ''
+    post:
+      operationId: moves_setups_create
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Setup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Setup'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setup'
+          description: ''
+  /moves/setups/{id}:
+    get:
+      operationId: moves_setups_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setup'
+          description: ''
+    put:
+      operationId: moves_setups_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Setup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Setup'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setup'
+          description: ''
+    patch:
+      operationId: moves_setups_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSetup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSetup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSetup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setup'
+          description: ''
+    delete:
+      operationId: moves_setups_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    Hand:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        cards:
+          type: string
+          maxLength: 2
+        suite:
+          type: boolean
+      required:
+      - cards
+      - id
+      - suite
+    Move:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        is_good:
+          type: boolean
+        setup:
+          type: integer
+        current_move:
+          type: integer
+      required:
+      - current_move
+      - id
+      - is_good
+      - setup
+    MoveSet:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+      required:
+      - id
+      - name
+    PatchedHand:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        cards:
+          type: string
+          maxLength: 2
+        suite:
+          type: boolean
+    PatchedMove:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        is_good:
+          type: boolean
+        setup:
+          type: integer
+        current_move:
+          type: integer
+    PatchedMoveSet:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+    PatchedPosition:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+    PatchedSetup:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        position:
+          type: integer
+        stack:
+          type: integer
+        hand:
+          type: integer
+    PatchedStack:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        max_size:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        min_size:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+    Position:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+      required:
+      - id
+      - name
+    Setup:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        position:
+          type: integer
+        stack:
+          type: integer
+        hand:
+          type: integer
+      required:
+      - hand
+      - id
+      - position
+      - stack
+    Stack:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        max_size:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        min_size:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+      required:
+      - id
+      - max_size
+      - min_size
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
