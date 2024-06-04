@@ -12,6 +12,7 @@ const Situations = () => {
     let [hands, setHands] = useState([]);
     let [positions, setPositions] = useState([]);
     let [stacks, setStacks] = useState([]);
+    let [authors, setAuthors] = useState([]);
     let [movesets, setMoveSets] = useState([]);
     const onFinish = async (values) => {
         await axiosInstance.get("/moves/move_sets/right_moves", {params: values}).then(
@@ -27,6 +28,12 @@ const Situations = () => {
     const getMoveSets = async () => {
         return await axiosInstance.get("/moves/move_sets").then(response => {
             setMoveSets(response.data)
+        })
+    }
+
+     const getAuthors = async () => {
+        return await axiosInstance.get("/fact_data/authors/").then(response => {
+            setAuthors(response.data)
         })
     }
 
@@ -60,6 +67,7 @@ const Situations = () => {
         getHands()
         getStacks()
         getPositions()
+        getAuthors()
     }, [])
 
     return (
@@ -84,6 +92,30 @@ const Situations = () => {
                         onFinishFailed={onFinishFailed}
                         autoComplete="off"
                     >
+                        <Form.Item
+                            label="Автор"
+                            name="author"
+                            rules={[
+                                {
+                                    required: true,
+                                },
+                            ]}
+                        >
+                            <Select
+                                style={{width: 200}}
+                                name={'author'}
+                            >
+                                {authors.map(author => {
+                                    return (
+                                        <Select.Option
+                                            value={author.id}>
+                                            {author.name}
+                                        </Select.Option>
+                                    )
+
+                                })}
+                            </Select>
+                        </Form.Item>
                         <Form.Item
                             label="Позиция"
                             name="position"

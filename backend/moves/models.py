@@ -10,6 +10,7 @@ class MoveSet(models.Model):
 
 
 class Setup(models.Model):
+    author = models.ForeignKey(Authors, related_name='setups', on_delete=models.CASCADE, null=True)
     current_move = models.ForeignKey(MoveSet, related_name='moves', on_delete=models.CASCADE, null=True)
     position = models.ForeignKey(Positions, related_name='setups', on_delete=models.CASCADE, null=True)
     stack = models.ForeignKey(Stacks, related_name='setups', on_delete=models.CASCADE, null=True)

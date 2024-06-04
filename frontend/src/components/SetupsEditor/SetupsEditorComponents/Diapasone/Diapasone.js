@@ -6,12 +6,14 @@ import {CloseOutlined, EditOutlined} from "@ant-design/icons";
 import GridSelect from "react-grid-select";
 import "./Diapasone.scss"
 import sorted_names from "../../../../assets/cards_sorted";
+import Meta from "antd/es/card/Meta";
 
 
 const Diapasones = () => {
     const [form] = Form.useForm();
     const [createForm] = Form.useForm();
     let [setups, setSetups] = useState([]);
+    let [authors, setAuthors] = useState([]);
     let [hands, setHands] = useState([]);
     let [positions, setPositions] = useState([]);
     let [stacks, setStacks] = useState([]);
@@ -28,7 +30,6 @@ const Diapasones = () => {
     const getDefaultSetup = async (id) => {
         return await axiosInstance.get(`/moves/setups/${id}`, ).then(response => {
             setDefaultValues(response.data)
-            console.log(response.data)
 
         })
     }
@@ -36,6 +37,12 @@ const Diapasones = () => {
     const getMoveSets = async () => {
         return await axiosInstance.get("/moves/move_sets").then(response => {
             setMoveSets(response.data)
+        })
+    }
+
+     const getAuthors = async () => {
+        return await axiosInstance.get("/fact_data/authors/").then(response => {
+            setAuthors(response.data)
         })
     }
 
@@ -69,6 +76,7 @@ const Diapasones = () => {
         getHands()
         getStacks()
         getPositions()
+        getAuthors()
     }, [])
 
     useEffect(() => {
@@ -125,6 +133,30 @@ const Diapasones = () => {
                         onFinishFailed={onFinishFailed}
                         autoComplete="off"
                     >
+                        <Form.Item
+                            label="Автор"
+                            name="author"
+                            rules={[
+                                {
+                                    required: true,
+                                },
+                            ]}
+                        >
+                            <Select
+                                style={{width: 400}}
+                                name={'author'}
+                            >
+                                {authors.map(author => {
+                                    return (
+                                        <Select.Option
+                                            value={author.id}>
+                                            {author.name}
+                                        </Select.Option>
+                                    )
+
+                                })}
+                            </Select>
+                        </Form.Item>
                         <Form.Item
                             label="Действие"
                             name="current_move"
@@ -370,6 +402,7 @@ const Diapasones = () => {
                         {setups.map((setup) => {
                             return <Col span={8} ><Card
                                 hoverable={true}
+
                                 title={
                                     `${setup.position.name} 
                                 ${setup.stack.max_size !== setup.stack.min_size ?
@@ -386,6 +419,10 @@ const Diapasones = () => {
                                         (hand.suite? hand.cards + 's': hand.cards + 'o') + ' '
                                     )
                                 })}</p>
+                                <Meta
+
+      description={setup.author.name}
+    />
                             </Card>
                             </Col>
                         })}

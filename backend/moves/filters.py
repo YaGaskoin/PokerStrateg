@@ -8,7 +8,8 @@ class SetupsFilter(django_filters.FilterSet):
     move = django_filters.NumberFilter(
         field_name="current_move"
     )
+    author = django_filters.NumberFilter()
 
     class Meta:
         model = Setup
-        fields = ['position', 'stack', 'move']
+        fields = ['author', 'position', 'stack', 'move']

@@ -5,6 +5,7 @@ import {SmallDashOutlined } from "@ant-design/icons";
 import Hands from './EditorComponents/Hands/Hands'
 import Positions from './EditorComponents/Positions/Positions'
 import Stacks from './EditorComponents/Stacks/Stacks'
+import Authors from "./EditorComponents/Authors/Authors";
 
 const {Sider, Content} = Layout;
 
@@ -38,6 +39,11 @@ const Editor = () => {
                                             <SmallDashOutlined /> Размер стэка
                                         </NavLink>
                                     </Menu.Item>
+                                    <Menu.Item>
+                                        <NavLink to={`${url}/authors`}>
+                                            <SmallDashOutlined /> Авторы
+                                        </NavLink>
+                                    </Menu.Item>
                                 </React.Fragment>
                             }
                         </Menu>
@@ -49,6 +55,7 @@ const Editor = () => {
                                 <Route  path={'hands'} element={<Hands/>}/>
                                 <Route path={'positions'} element={<Positions/>}/>
                                 <Route path={'stacks'} element={<Stacks/>}/>
+                                 <Route path={'authors'} element={<Authors/>}/>
                               </Routes>
 
                         </Content>

@@ -20,9 +20,17 @@ stacks_detail = StackViewSet.as_view({"get": "retrieve",
                                       "put": "update",
                                       "patch": "partial_update", })
 
+authors = AuthorsViewSet.as_view({"get": "list", "post": "create"})
+authors_detail = AuthorsViewSet.as_view({"get": "retrieve",
+                                      "delete": "destroy",
+                                      "put": "update",
+                                      "patch": "partial_update", })
+
 urlpatterns = [
     path("positions/", positions, name="positions"),
     path("positions/<int:pk>", positions_detail, name="positions_detail"),
+    path("authors/", authors, name="authors"),
+    path("authors/<int:pk>", authors_detail, name="authors_detail"),
     path("hands", hands, name="hands"),
     path("hands/<int:pk>", hands_detail, name="hands_detail"),
     path("stacks", stacks, name="stacks"),

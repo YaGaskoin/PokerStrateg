@@ -17,3 +17,8 @@ class PositionViewSet(viewsets.ModelViewSet):
 class StackViewSet(viewsets.ModelViewSet):
     queryset = Stacks.objects.all()
     serializer_class = StackSerializer
+
+
+class AuthorsViewSet(viewsets.ModelViewSet):
+    queryset = Authors.objects.all()
+    serializer_class = AuthorSerializer

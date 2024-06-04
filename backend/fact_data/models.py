@@ -23,3 +23,10 @@ class Hands(models.Model):
     class Meta:
         ordering = ['-id']
         unique_together = ('cards', 'suite',)
+
+
+class Authors(models.Model):
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        ordering = ['-id']
